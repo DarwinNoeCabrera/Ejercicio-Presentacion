@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TXTAPELLIDO = new System.Windows.Forms.TextBox();
             this.TXTNOMBRE = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,7 +40,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TXTMEDICO = new System.Windows.Forms.TextBox();
             this.DGBMEDICOS = new System.Windows.Forms.DataGridView();
+            this.BtnAguardar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGBMEDICOS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // TXTAPELLIDO
@@ -133,11 +138,37 @@
             this.DGBMEDICOS.Size = new System.Drawing.Size(719, 244);
             this.DGBMEDICOS.TabIndex = 12;
             // 
+            // BtnAguardar
+            // 
+            this.BtnAguardar.Location = new System.Drawing.Point(386, 121);
+            this.BtnAguardar.Name = "BtnAguardar";
+            this.BtnAguardar.Size = new System.Drawing.Size(75, 23);
+            this.BtnAguardar.TabIndex = 23;
+            this.BtnAguardar.Text = "Guardar";
+            this.BtnAguardar.UseVisualStyleBackColor = true;
+            this.BtnAguardar.Click += new System.EventHandler(this.BtnAguardar_Click);
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Location = new System.Drawing.Point(467, 121);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.BtnEliminar.TabIndex = 24;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Medico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnEliminar);
+            this.Controls.Add(this.BtnAguardar);
             this.Controls.Add(this.TXTAPELLIDO);
             this.Controls.Add(this.TXTNOMBRE);
             this.Controls.Add(this.label5);
@@ -152,6 +183,7 @@
             this.Name = "Medico";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.DGBMEDICOS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,6 +202,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TXTMEDICO;
         private System.Windows.Forms.DataGridView DGBMEDICOS;
+        private System.Windows.Forms.Button BtnAguardar;
+        private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

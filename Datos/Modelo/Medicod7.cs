@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Datos.Modelo
 {
-    public class Medico
+    public class Medicod
     {
         [Key]
         public int MedicoId { get; set; }

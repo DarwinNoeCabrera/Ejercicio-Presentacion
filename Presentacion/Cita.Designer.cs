@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TXTPACIENTE = new System.Windows.Forms.TextBox();
             this.TXTMEDICO = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,7 +40,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TXTCITA = new System.Windows.Forms.TextBox();
             this.DGBCITA = new System.Windows.Forms.DataGridView();
+            this.BtnGuardar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGBCITA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // TXTPACIENTE
@@ -134,11 +139,37 @@
             this.DGBCITA.Size = new System.Drawing.Size(719, 244);
             this.DGBCITA.TabIndex = 12;
             // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.Location = new System.Drawing.Point(372, 123);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.BtnGuardar.TabIndex = 23;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Location = new System.Drawing.Point(453, 123);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.BtnEliminar.TabIndex = 24;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Cita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnEliminar);
+            this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.TXTPACIENTE);
             this.Controls.Add(this.TXTMEDICO);
             this.Controls.Add(this.label5);
@@ -153,6 +184,7 @@
             this.Name = "Cita";
             this.Text = "Cita";
             ((System.ComponentModel.ISupportInitialize)(this.DGBCITA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +203,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TXTCITA;
         private System.Windows.Forms.DataGridView DGBCITA;
+        private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
