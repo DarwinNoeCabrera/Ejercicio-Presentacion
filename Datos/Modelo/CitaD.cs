@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace Datos.Modelo
 {
-    public class Cita
+    public class Citad
     {
         [Key]
         public int CitaId { get; set; }
-        public Medico MedicoID { get; set; }
+        public Medicod MedicoID { get; set; }
+        public int Medicosd {get; set; }
         public Paciented PacienteId { get; set; }
-  
+        public int Pacientesd { get; set; }
         public DateTime FechaCita { get; set; }
         public bool Estado { get; set; }
     }

@@ -65,9 +65,11 @@
     <Compile Include="Core\IunitOfWork.cs" />
     <Compile Include="Core\Repository.cs" />
     <Compile Include="Core\UnitOfWork.cs" />
-    <Compile Include="Modelo\Cita.cs" />
-    <Compile Include="Modelo\Medico.cs" />
+    <Compile Include="Modelo\CitaD.cs" />
+    <Compile Include="Modelo\Medicod7.cs" />
     <Compile Include="Modelo\Paciented.cs" />
+    <Compile Include="Ncita.cs" />
+    <Compile Include="Nmedico.cs" />
     <Compile Include="Npaciented+.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,24 +11,22 @@ namespace Datos
 {
     public class Ncita
     {
-        Repository<CitaD> _repository;
-        public List<CitaD> TodasLosClientes()
+        Repository<Citad> _repository;
+        public List<Citad> TodasLosClientes()
         {
             return _repository.Consulta().Include(c => c.CitaId).ToList();
         }
 
-        public int Agregar(CitaD medi)
+        public int Agregar(Citad medi)
         {
             medi.FechaCita = DateTime.Now;
-            medi.FechaModificacion = DateTime.Now;
             _repository.Agregar(medi);
-
             return 1;
         }
 
-        public int Editar(CitaD medi)
+        public int Editar(Citad medi)
         {
-            
+
             var pace = _repository.Consulta().FirstOrDefault(C => C.CitaId == medi.CitaId);
 
             if (pace != null)
@@ -47,7 +45,7 @@ namespace Datos
 
         public int Eliminar(int medis)
         {
-           
+
             var pace = _repository.Consulta().FirstOrDefault(C => C.CitaId == medis);
             if (pace != null)
             {
