@@ -9,6 +9,7 @@ namespace Datos.Modelo
 {
     public class Citad
     {
+        //cambios
         [Key]
         public int CitaId { get; set; }
         public Medicod MedicoID { get; set; }
